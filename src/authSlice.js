@@ -18,7 +18,7 @@ export const registerUser = createAsyncThunk(
     
     try {
       
-      const response = await axiosClient.post(`${process.env.VITE_API_URL}/user/register`, userData);
+      const response = await axiosClient.post(`/user/register`, userData);
       
       return response.data.user;
     } catch (err) {
@@ -32,7 +32,7 @@ export const loginUser = createAsyncThunk(
   "auth/login",
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axiosClient.post(`${process.env.VITE_API_URL}/user/login`, credentials);
+      const response = await axiosClient.post(`/user/login`, credentials);
       return response.data.user;
     } catch (err) {
       return rejectWithValue(normalizeError(err));
@@ -45,7 +45,7 @@ export const checkAuth = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       
-      const response = await axiosClient.post(`${process.env.VITE_API_URL}/user/check`);
+      const response = await axiosClient.post(`user/check`);
       
       return response.data.user;
     } catch (err) {
@@ -58,7 +58,7 @@ export const logoutUser = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
     try {
-      await axiosClient.post(`${process.env.VITE_API_URL}/user/logout`);
+      await axiosClient.post("/user/logout");
       return null;
     } catch (err) {
       return rejectWithValue(normalizeError(err));
