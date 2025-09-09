@@ -55,7 +55,7 @@ function App(){
 
             <Route path='/home' element={<Home userdata={user} ></Home>}></Route>
             <Route path="/" element={<DSAVisualizerLanding></DSAVisualizerLanding>} ></Route>
-            <Route path='/home/:technique' element={<Test></Test>} ></Route>
+            <Route path='/home/:technique' element={<SubCard></SubCard>} ></Route>
 
         </Routes>
         </GlobalContext.Provider>
