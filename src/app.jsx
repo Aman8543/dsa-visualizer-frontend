@@ -17,6 +17,12 @@ import SubCard from './component/subCard.jsx'
 import { createContext } from 'react'
 import globaldata from './globalVar.jsx'
 
+const Test= function(){
+    return(
+        <div>Hello</div>
+    )
+}
+
 export const GlobalContext = createContext();
 
 function App(){
@@ -49,7 +55,7 @@ function App(){
 
             <Route path='/home' element={<Home userdata={user} ></Home>}></Route>
             <Route path="/" element={<DSAVisualizerLanding></DSAVisualizerLanding>} ></Route>
-            <Route path='/home/:technique' element={<SubCard></SubCard>} ></Route>
+            <Route path='/home/:technique' element={<Test></Test>} ></Route>
 
         </Routes>
         </GlobalContext.Provider>
