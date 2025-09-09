@@ -130,7 +130,7 @@ function Signup() {
 
         
 
-        <div className="divider">OR</div>
+        {/* <div className="divider">OR</div>
 
         <button
           type="button"
@@ -138,7 +138,7 @@ function Signup() {
           className="btn btn-outline btn-accent"
         >
           Continue with Google
-        </button>
+        </button> */}
 
         <div>
           <p>{isAuthenticated?.message ? isAuthenticated.message : ""}</p>
