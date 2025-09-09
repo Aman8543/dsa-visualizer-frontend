@@ -87,15 +87,7 @@ export default function HomeNav({userdata}){
               From: "transform opacity-100 scale-100"
               To: "transform opacity-0 scale-95"
           --> */}
-          <div
-  className={`absolute right-0 mt-2 w-auto origin-top-right rounded-md bg-white py-1 transition-normal shadow-lg ring-1 ring-black/5 focus:outline-hidden ${
-    isOpen ? "block" : "hidden"
-  }`}
-  role="menu"
-  aria-orientation="vertical"
-  aria-labelledby="user-menu-button"
-  tabIndex="-1"
->
+          <div className="absolute right-0 mt-2 w-auto origin-top-right rounded-md bg-white py-1 group-hover:visible transition-normal shadow-lg ring-1 ring-black/5 focus:outline-hidden invisible " role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabIndex="-1">
             {/* <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" --> */}
 
             {/* <a href="#" className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
