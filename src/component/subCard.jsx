@@ -32,7 +32,7 @@ const submenuItems = [
 
  
 
-export default function SubCard(userdata) {
+export default function SubCard() {
   const globaldata = useContext(GlobalContext);
   const { technique } = useParams();
   const category = globaldata.find(element => element.title === technique);
